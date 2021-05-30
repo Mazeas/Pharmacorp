@@ -1,0 +1,45 @@
+<!-- Body-->
+<div class="content" role="main">
+    <div class="container">
+            <div class="form-group">
+                <div class="col-2">
+                    
+                </div>
+                <div class="col-8"></div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <div class="content-wrapper">
+                        <div class="table-responsive table-wrapper px-1-px">
+                            <table class="table table-striped" cellspacing="0" cellpadding="0">
+                                <thead class="thead-dark tab_desc">
+                                    <tr>
+                                        <th>Libellé</th>
+                                        <th>Description</th>
+                                        <th>dosage</th>
+                                        <th>Pathologie</th>
+                                        <th>Effets secondaires</th>
+                                        <th>Contre indication</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor= "let item of drugs.list |filter:term">
+                                            <td>{{item.libelle}}</td>
+                                            <td>{{item.description}}</td>
+                                            <td>{{item.dosage}}</td>
+                                            <td>{{item.pathology}}</td>
+                                            <td>{{item.side_effects}}</td>
+                                            <td>{{item.contraindication}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                  <input class="form-control" type="text" [(ngModel)]="term" placeholder="Rechercher...">
+                </div>
+            </div>
+        </div>
+      
+      

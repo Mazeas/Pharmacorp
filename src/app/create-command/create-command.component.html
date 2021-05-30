@@ -1,0 +1,57 @@
+<div class="content" role="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <form #commandForm="ngForm" (ngSubmit)="onFormSubmit(commandForm)" #form="ngForm">
+                    <div class="form-group">
+                        <label>Libellé</label>
+                        <input type="text"
+                                ngModel
+                                name="libelle"
+                                id="libelle"
+                                class="form-control"
+                                placeholder="Saisir le libellé du médicament">
+                        <label>Description</label>
+                        <input type="text"
+                                ngModel
+                                name="description"
+                                id="description"
+                                class="form-control"
+                                placeholder="Saisir la description du médicament">
+                        <label>Dosage</label>
+                        <input type="text"
+                               ngModel
+                               name="dosage"
+                               id="dosage"
+                               class="form-control"
+                               placeholder="Saisir le dosage">
+                        <label>Pathologie</label>
+                        <input type="text"
+                                ngModel
+                                name="pathology"
+                                id="pathology"
+                                class="form-control"
+                                placeholder="Saisir la pathologie">
+                        <label>Effets secondaires</label>
+                        <input type="text"
+                                ngModel
+                                name="side_effects"
+                                id="side_effects"
+                                class="form-control"
+                                placeholder="Saisir les effets secondaires">
+                        <label>Contraindication</label>
+                        <input type="text"
+                                ngModel
+                                name="contraindication"
+                                id="contraindication"
+                                class="form-control"
+                                placeholder="Saisir la contraindication">                       
+                        <br>
+                        <button class="btn btn-primary buttons">Valider</button>
+                        <button type="button" class="btn btn-danger buttons" (click)="resetCommandForm(commandForm)">Réinitialiser</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

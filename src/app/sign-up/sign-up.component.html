@@ -1,0 +1,60 @@
+<div class="content" role="main">
+    <div class="container">
+        <h2>Formulaire d'inscription</h2>
+        <div class="row">
+            <div class="col-md-8">
+                <form #userForm="ngForm" (ngSubmit)="onFormSubmit(userForm)" #form="ngForm">
+                    <div class="form-group">
+                        <label>Prénom</label>
+                        <input type="text"
+                               ngModel
+                               name="FirstName"
+                               id="FirstName"
+                               class="form-control"
+                               placeholder="Saisir votre prénom">
+                        <label>Nom</label>
+                        <input type="text"
+                                ngModel
+                                name="FamilyName"
+                                id="FamilyName"
+                                class="form-control"
+                                placeholder="Saisir votre nom">
+                        <label>Société</label>
+                        <input type="text"
+                                ngModel
+                                name="Society"
+                                id="Society"
+                                class="form-control"
+                                placeholder="Saisir un nom de société">
+                        <label>Email</label>
+                        <input type="email"
+                                ngModel
+                                name="Mail"
+                                id="Mail"
+                                class="form-control"
+                                placeholder="Entrer une adresse mail">
+                        <div class="alert alert-danger" id="WrongMail" style="display: none;">Le format de l'adresse mail n'est pas correct</div>
+                        <label>Mot de passe</label>
+                        <input type="password"
+                                ngModel
+                                name="Password"
+                                id="Password"
+                                class="form-control"
+                                placeholder="Entrer un mot de passe">
+                        <label>Vérification du mot de passe</label>
+                        <input type="password"
+                                ngModel
+                                name="confirmPassword"
+                                id="confirmPassword"
+                                class="form-control"
+                                placeholder="Entrer un mot de passe">
+                        <div class="alert alert-danger" id="WrongPassword" style="display: none;">Le mot de passe ne correspond pas</div>
+                        <br>
+                        <button class="btn btn-primary buttons">Valider</button>
+                        <button type="button" class="btn btn-danger buttons" (click)="resetUserForm(userForm)">Réinitialiser</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

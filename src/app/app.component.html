@@ -1,0 +1,22 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+
+  <button mat-button [matMenuTriggerFor]="menu" class="btn menuButton">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="btnUser();">Utilisateurs</button>
+    <button mat-menu-item (click)="btnCreateMedicament();">Créer un médicament</button>
+    <button mat-menu-item (click)="btnMedicament();">Liste des médicaments</button>
+    <button mat-menu-item (click)="btnCommand();">Commandes</button>
+    <button mat-menu-item (click)="btnConnect();">Se connecter</button>
+  </mat-menu>
+  <div>{{this.user.family_name}}</div>
+  <div class="spacer"></div>
+  <div id="meteo">{{meteo.location.name}}, {{now}}, {{meteo.current.temperature}} °C</div>
+  <div>{{title}}</div>
+  <img width="40" alt="Pharmacorp"
+    src="https://cdn.freebiesupply.com/logos/large/2x/pharmacie-logo-png-transparent.png" />
+</div>
+
+
+
+<router-outlet></router-outlet>
