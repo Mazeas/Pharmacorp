@@ -1,7 +1,6 @@
 # PharmaCorp
 
 This project is created by Hubert Hongrois, Quentin Plain and Charlie Gas.
-You can access this project using this address : http://163.172.122.64:4200/.
 
 ## Requierements
 
