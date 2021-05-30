@@ -45,7 +45,7 @@ Also, be sure to have `git` available in your PATH, `npm` might need it.
 
 ## Install
 
-    $ git clone https://github.com/HHongois/pharmacorpF.git
+    $ git clone https://github.com/Mazeas/pharmacorpF.git
     $ cd pharmacorpF
     $ npm install
 
